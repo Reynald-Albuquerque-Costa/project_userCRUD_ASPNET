@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UserAPI.Src.Contexts;
+using UserAPI.Src.Repositories;
+using UserAPI.Src.Repositories.Implements;
 
 namespace UserAPI
 {
@@ -28,6 +30,9 @@ namespace UserAPI
         {
             // Database configuration
             services.AddDbContext<UserContext>(opt => opt.UseSqlServer(Configuration["ConnectionStringsDev:DefaultConnection"]));
+
+            // Repositories
+            services.AddScoped<IUser, UserRepository>();
 
             // Controllers
             services.AddControllers();
