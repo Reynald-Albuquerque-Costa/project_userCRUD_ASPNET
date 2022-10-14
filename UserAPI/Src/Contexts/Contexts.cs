@@ -5,7 +5,7 @@ namespace UserAPI.Src.Contexts
 {
     public class UserContext : DbContext
     {
-        #region Atributos
+        #region Attributes
         public DbSet<User> Users { get; set; }
 
 

@@ -6,7 +6,7 @@ namespace UserAPI.Src.Model
     [Table("tb_users")]
     public class User
     {
-        #region Atributos
+        #region Attributes
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
